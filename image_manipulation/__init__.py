@@ -2,7 +2,7 @@
 Default paths
 """
 
-root_dir = "/home/henfur/projects/iut/ressources-wally/"
+root_dir = ""
 
 if (root_dir != None):
     SOURCE = root_dir + "images/"
@@ -10,4 +10,4 @@ if (root_dir != None):
     TRAIN = root_dir + "sorted_files/train/"
     TEST = root_dir + "sorted_files/validation/"
 else:
-    print("Please define the root directory")
+    print("Please define the root directory in image_manipulation/__init__.py")
