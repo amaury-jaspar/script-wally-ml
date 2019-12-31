@@ -11,10 +11,13 @@ Module libraries and paths
 from image_manipulation import TRAIN
 from image_manipulation import TEST
 
-import check_dirs as chkd
+import image_manipulation.check_dirs as chkd
 
 chkd.check_dara_dir([TRAIN, TEST])
 
+"""
+Creates a dictionnary with the files in "path" attributing a unique integer to each file
+"""
 def label_files(path):
     data_dir = os.listdir(path)
     print("data_dir = " + str(data_dir))
@@ -25,6 +28,11 @@ def label_files(path):
         index += 1
     return labeled_dict
 
+# def shuffle():
+
+"""
+Splits the data into 2 directories (TRAIN and TEST)
+"""
 def split(labels, proportion):
     
     for lbl in labels:

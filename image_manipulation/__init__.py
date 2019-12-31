@@ -2,7 +2,7 @@
 Default paths
 """
 
-root_dir = "/home/henfur/projects/iut/ressources-wally"
+root_dir = "/home/henfur/projects/iut/ressources-wally/"
 
 if (root_dir != None):
     SOURCE = root_dir + "images/"

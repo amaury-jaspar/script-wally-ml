@@ -14,7 +14,7 @@ from image_manipulation import SOURCE
 from image_manipulation import TRAIN
 from image_manipulation import SELECT
 
-import check_dirs as chkd
+import image_manipulation.check_dirs as chkd
 
 if not os.path.exists(SOURCE):
         print("Please add the images folders containing all the categorized images")
@@ -73,7 +73,6 @@ def crop_all():
 
     for file in filelist:
         data = open_selections(file)
-
         image_list = os.listdir(SOURCE + file)
         image_list.sort()
 
@@ -84,7 +83,6 @@ def crop_all():
             
             with Image.open(SOURCE + file + '/' + image) as current_image:
                 true_index, false_index = 0,0
-
                 while( (true_index < len(true_values[0])) or (false_index < len(false_values[0])) ):
                     file_name = 'value-count.jpg'
                     if (true_index < len(true_values[0])):

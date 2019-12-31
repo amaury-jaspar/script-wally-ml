@@ -1,3 +1,5 @@
 TODO : 
     - comments (add some + translate)
     - "scanner" script to scan a whole wally page
+    - Error checking when cropping images, rather than just printing "All images have successfully been cropped" even when it's false 
+    (altough it seems that the function doesn't even finishes when there's an exeception so this kinda works)
