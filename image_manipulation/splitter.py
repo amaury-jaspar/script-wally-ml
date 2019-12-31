@@ -11,38 +11,9 @@ Module libraries and paths
 from image_manipulation import TRAIN
 from image_manipulation import TEST
 
+import check_dirs as chkd
 
-if not os.path.exists(TRAIN):
-    os.makedirs(TRAIN)
-if not os.path.exists(TRAIN + 'true'):
-    try:
-        os.makedirs(TRAIN + 'true')
-    except Exception:
-        print("Could not create the" + TRAIN + 'true' + "folder")
-        raise Exception
-    
-if not os.path.exists(TRAIN + 'false'):
-    try:
-        os.makedirs(TRAIN + 'false')
-    except Exception:
-        print("Could not create the" + TRAIN + 'false' + "folder")
-        raise Exception
-if not os.path.exists(TEST):
-    os.makedirs(TEST)
-if not os.path.exists(TEST + 'true'):
-    try:
-        os.makedirs(TEST+ 'true')
-    except Exception:
-        print("Could not create the" + TEST + 'true' + "folder")
-        raise Exception
-    
-if not os.path.exists(TEST + 'false'):
-    try:
-        os.makedirs(TEST + 'false')
-    except Exception:
-        print("Could not create the" + TEST + 'false' + "folder")
-        raise Exception
-
+chkd.check_dara_dir([TRAIN, TEST])
 
 def label_files(path):
     data_dir = os.listdir(path)

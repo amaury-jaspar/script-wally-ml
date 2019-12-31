@@ -14,25 +14,13 @@ from image_manipulation import SOURCE
 from image_manipulation import TRAIN
 from image_manipulation import SELECT
 
+import check_dirs as chkd
+
 if not os.path.exists(SOURCE):
         print("Please add the images folders containing all the categorized images")
         raise FileNotFoundError
 else:
-    if not os.path.exists(TRAIN):
-        os.makedirs(TRAIN)
-    if not os.path.exists(TRAIN + 'true'):
-        try:
-            os.makedirs(TRAIN + 'true')
-        except Exception:
-            print("Could not create the" + TRAIN + 'true' + "folder")
-            raise Exception
-        
-    if not os.path.exists(TRAIN + 'false'):
-        try:
-            os.makedirs(TRAIN + 'false')
-        except Exception:
-            print("Could not create the" + TRAIN + 'false' + "folder")
-            raise Exception
+    chkd.check_dara_dir(TRAIN)
 
 def open_selections(file):
     with open(SELECT + file) as selection:
