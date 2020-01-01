@@ -16,7 +16,7 @@ import image_manipulation.check_dirs as chkd
 chkd.check_dara_dir([TRAIN, TEST])
 
 """
-Creates a dictionnary with the files in "path" attributing a unique integer to each file
+Creates an array with the files in "path" attributing a unique integer to each file
 """
 def label_files(path):
     data_dir = os.listdir(path)
