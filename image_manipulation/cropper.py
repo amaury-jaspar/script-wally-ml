@@ -69,7 +69,7 @@ def crop_all():
     filelist = os.listdir(SELECT)
     filelist.sort()
 
-    t_img_count, f_img_count = -1, -1
+    t_img_count = f_img_count = -1
 
     for file in filelist:
         data = open_selections(file)
