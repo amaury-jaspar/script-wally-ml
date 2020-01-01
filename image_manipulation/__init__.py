@@ -4,6 +4,9 @@ Default paths
 
 root_dir = ""
 
+if (root_dir[len(root_dir)-1] != '/'):
+    root_dir += '/'
+
 if (root_dir != None):
     SOURCE = root_dir + "images/"
     SELECT = root_dir + "face_recognition/selections/"

@@ -25,15 +25,20 @@ def label_files(path):
         labeled_dict.append(str(obj))
     return labeled_dict
 
-# def shuffle():
+def shuffle_data(data, n):
+    for i in range(n):
+        random.shuffle(data)
+    return data
 
 """
 Splits the data into 2 directories (TRAIN and TEST)
 """
-def split(labels, proportion):
+def split(labels, proportion, shuffle=True, nb_shuffle=1):
     
     for lbl in labels:
         data = label_files(os.path.join(os.path.dirname(TRAIN), lbl))
+        if (shuffle == True):
+            data = shuffle_data(data, nb_shuffle)
         size = len(data)
         #Checking if the proportion is the right type
         if ( (type(proportion) == float) and (0. < proportion < 1.) ):
