@@ -1,6 +1,6 @@
 import os
 
-def check_dara_dir(paths):
+def check_data_dir(paths):
     if type(paths) != list:
         paths = [paths]
     for dir in paths:
@@ -19,3 +19,11 @@ def check_dara_dir(paths):
             except Exception:
                 print("Could not create the" + dir + "false folder")
                 raise Exception
+
+def check_dirs(path, dirs):
+    if type(dirs) != list:
+        dirs = [dirs]
+    for d in dirs:
+        new_path = os.path.join(path, d)
+        if not os.path.exists(new_path):
+            os.makedirs(new_path)

@@ -13,7 +13,7 @@ from image_manipulation import TEST
 
 import image_manipulation.check_dirs as chkd
 
-chkd.check_dara_dir([TRAIN, TEST])
+chkd.check_data_dir([TRAIN, TEST])
 
 """
 Creates an array with the files in "path" attributing a unique integer to each file
@@ -51,7 +51,7 @@ def split(labels, proportion, shuffle=True, nb_shuffle=1):
         #Initializing loop counter and index history
         file_count = 0
         index_hist = [] #Stores the already picked index to avoid trying to remove theses items again
-        print("DATA : ", len(data))
+
         while(file_count < nb_test):
             size = len(data) #Data size decreases each turn
             rd_index = random.randint(0,size-1) #Generates a random array index

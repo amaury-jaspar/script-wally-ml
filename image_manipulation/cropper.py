@@ -20,7 +20,7 @@ if not os.path.exists(SOURCE):
         print("Please add the images folders containing all the categorized images")
         raise FileNotFoundError
 else:
-    chkd.check_dara_dir(TRAIN)
+    chkd.check_data_dir(TRAIN)
 
 def open_selections(file):
     with open(SELECT + file) as selection:
