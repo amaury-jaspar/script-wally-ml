@@ -13,8 +13,8 @@ from image_manipulation import TEST
 
 import image_manipulation.check_dirs as chkd
 
-chkd.check_data_dir([TRAIN, TEST])
 
+chkd.check_data_dir([TRAIN, TEST])
 """
 Creates an array with the files in "path" attributing a unique integer to each file
 """
