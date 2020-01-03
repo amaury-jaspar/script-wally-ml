@@ -3,7 +3,7 @@ Default paths
 """
 import os
 
-root_dir = "/home/henfur/projects/iut/ressources-wally"
+root_dir = None
 
 if (root_dir != None):
     SOURCE = os.path.join(root_dir, "images")
