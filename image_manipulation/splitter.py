@@ -50,18 +50,15 @@ def split(labels, proportion, shuffle=True, nb_shuffle=1):
             raise TypeError
         #Initializing loop counter and index history
         file_count = 0
-        index_hist = [] #Stores the already picked index to avoid trying to remove theses items again
 
         while(file_count < nb_test):
             size = len(data) #Data size decreases each turn
             rd_index = random.randint(0,size-1) #Generates a random array index
-            if (rd_index not in index_hist):
-                index_hist.append(rd_index)
-                path = os.path.join(TRAIN, lbl)
-                path = os.path.join(path, data[rd_index])
-                shutil.move(path, os.path.join(TEST, lbl)) #Move files from TRAIN to TEST directory
-                del data[rd_index]
-                file_count += 1
+            path = os.path.join(TRAIN, lbl)
+            path = os.path.join(path, data[rd_index])
+            shutil.move(path, os.path.join(TEST, lbl)) #Move files from TRAIN to TEST directory
+            del data[rd_index]
+            file_count += 1
         
 
 
