@@ -6,16 +6,16 @@ def check_data_dir(paths):
     for dir in paths:
         if not os.path.exists(dir):
             os.makedirs(dir)
-        if not os.path.exists(dir + 'true'):
+        if not os.path.exists(os.path.join(dir, 'true')):
             try:
-                os.makedirs(dir + 'true')
+                os.makedirs(os.path.join(dir, 'true'))
             except Exception:
                 print("Could not create the" + dir + "true folder")
                 raise Exception
             
-        if not os.path.exists(dir + 'false'):
+        if not os.path.exists(os.path.join(dir, 'false')):
             try:
-                os.makedirs(dir + 'false')
+                os.makedirs(os.path.join(dir, 'false'))
             except Exception:
                 print("Could not create the" + dir + "false folder")
                 raise Exception
