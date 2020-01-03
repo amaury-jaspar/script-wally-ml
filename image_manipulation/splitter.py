@@ -36,7 +36,7 @@ Splits the data into 2 directories (TRAIN and TEST)
 def split(labels, proportion, shuffle=True, nb_shuffle=1):
     
     for lbl in labels:
-        data = label_files(os.path.join(os.path.dirname(TRAIN), lbl))
+        data = label_files(os.path.join(TRAIN, lbl))
         if (shuffle == True):
             data = shuffle_data(data, nb_shuffle)
         size = len(data)
@@ -57,9 +57,9 @@ def split(labels, proportion, shuffle=True, nb_shuffle=1):
             rd_index = random.randint(0,size-1) #Generates a random array index
             if (rd_index not in index_hist):
                 index_hist.append(rd_index)
-                path = os.path.join(os.path.dirname(TRAIN), lbl)
+                path = os.path.join(TRAIN, lbl)
                 path = os.path.join(path, data[rd_index])
-                shutil.move(path, os.path.join(os.path.dirname(TEST), lbl)) #Move files from TRAIN to TEST directory
+                shutil.move(path, os.path.join(TEST, lbl)) #Move files from TRAIN to TEST directory
                 del data[rd_index]
                 file_count += 1
         
