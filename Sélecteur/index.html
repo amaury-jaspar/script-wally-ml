@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" type="text/css" href="style.css">
+  </head>
+  <body>
+    <div id="page-name"></div>
+    <select id="image-select" name="image" onchange="updateImage();"></select>
+    <button onclick="clearSelection()">Clear</button>
+    <button onclick="copySelection()">Copy</button>
+    <div id="image-container"><img id="page-image"></div>
+    <script src="svg.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>

@@ -1,0 +1,2 @@
+Le code présent dans ce répertoire fonctionne en faisant appel à des scan d'images actuellement non disponible ici même pour des raisons de droits d'auteurs
+Pour que ce code fonctionne, il s'agit de créer un repertoire "images" et de placer les images dans ce repertoire.

@@ -1,0 +1,1 @@
+Le code présent dans ce répertoire est développé par Monsieur Victor POUPET, enseignant au département Informatique de l’IUT de Montpellier-Sète et tuteur de ce projet.

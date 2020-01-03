@@ -1,0 +1,14 @@
+doctype html
+html
+  head
+    meta(charset="utf-8")
+    link(rel="stylesheet" type="text/css" href="style.css")
+  body
+    #page-name
+    select(id="image-select" name="image" onchange="updateImage();")
+    button(onclick="img.save()") Save
+    button(onclick="clearSelection()") Clear
+    #image-container
+      canvas#image-canvas
+    script(src="svg.js")
+    script(src="script.js")
