@@ -13,3 +13,7 @@ This script parses json files located in the `SELECT` directory and extracts pos
 ## splitter.py
 
 This scripts splits the images from `TRAIN`, into *train* (`TRAIN`) and *test* (`TEST`) folders according to the given proportion.  
+
+## scanner.py
+
+The scanner script is used to generated cropped images out of a set of larger images. The scanner moves 50px horizontaly and 100 px verticaly by default to be able to have every element you moght want to identify in the cropped images.
