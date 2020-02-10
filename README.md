@@ -2,7 +2,7 @@
 
 The *Where's Wally project* is a school assignement given at IUT Montpellier-Sète. The projects aims at training a neural network using the tensorflow python library. The model must be able to make the distinction between faces and other objects in the series of books *Where's Wally*. Given a certain page of the book, it must also be able to find Wally with a sufficient amount of confidence.  
 
-You will find parts of the scripts available here aswell as the actual neural ne network part of the project on [the google collab Notebook](https://colab.research.google.com/drive/1zRvD510GGfaGGkhRKRHnyd5aTaxeALy_)
+You will find parts of the scripts available here aswell as the actual neural ne network part of the project on [the google collab Notebook](https://colab.research.google.com/drive/1yGOYuXR9skk2Sk7lNVjbCalBCUcipfCS#scrollTo=kR7-V5CzkquA). Links to the 'Where's Wally?' images are not provided for copyright reasons.
 
 # The scripts
 
